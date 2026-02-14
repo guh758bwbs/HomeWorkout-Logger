@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeWorkout Logger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>宅トレ記録</h1>
+
+    <div class="card">
+      <div class="input-group">
+        <input type="text" id="exercise" placeholder="種目名 (例: 腕立て伏せ)" list="suggestions">
+        <datalist id="suggestions">
+          <option value="腕立て伏せ">
+          <option value="スクワット">
+          <option value="腹筋">
+          <option value="プランク(秒)">
+          <option value="懸垂">
+        </datalist>
+        <input type="number" id="reps" placeholder="回数/秒数" min="1">
+        <button onclick="addRecord()">記録する</button>
+      </div>
+    </div>
+
+    <div id="historyContainer"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
